@@ -97,6 +97,7 @@ int main(int argc, char** argv) {
 
         fs::path o_path(output_path);
         o_path /= fs::path("pcds");
+        o_path = "/home/tingxfan/Documents/pcds";
 
         fs::create_directory(o_path);
         cout << "Saving pcd files to " << o_path << endl;
