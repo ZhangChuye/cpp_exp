@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tingxfan/cpp_exp/study_pointcloud/pcl_debug.cpp
+iostream
+-
+fstream
+-
+string
+-
+array
+-
+vector
+-
+

@@ -119,6 +119,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/pcl_debug.dir/DependInfo.cmake"
+  "CMakeFiles/simple_visualizer.dir/DependInfo.cmake"
   "CMakeFiles/pcl_visualizer_demo.dir/DependInfo.cmake"
   "CMakeFiles/pcd_write_test.dir/DependInfo.cmake"
   )

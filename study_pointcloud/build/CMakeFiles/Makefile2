@@ -53,6 +53,8 @@ CMAKE_BINARY_DIR = /home/tingxfan/cpp_exp/study_pointcloud/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/pcl_debug.dir/all
+all: CMakeFiles/simple_visualizer.dir/all
 all: CMakeFiles/pcl_visualizer_demo.dir/all
 all: CMakeFiles/pcd_write_test.dir/all
 
@@ -64,10 +66,66 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/pcl_debug.dir/clean
+clean: CMakeFiles/simple_visualizer.dir/clean
 clean: CMakeFiles/pcl_visualizer_demo.dir/clean
 clean: CMakeFiles/pcd_write_test.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/pcl_debug.dir
+
+# All Build rule for target.
+CMakeFiles/pcl_debug.dir/all:
+	$(MAKE) -f CMakeFiles/pcl_debug.dir/build.make CMakeFiles/pcl_debug.dir/depend
+	$(MAKE) -f CMakeFiles/pcl_debug.dir/build.make CMakeFiles/pcl_debug.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tingxfan/cpp_exp/study_pointcloud/build/CMakeFiles --progress-num=3,4 "Built target pcl_debug"
+.PHONY : CMakeFiles/pcl_debug.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/pcl_debug.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tingxfan/cpp_exp/study_pointcloud/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/pcl_debug.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tingxfan/cpp_exp/study_pointcloud/build/CMakeFiles 0
+.PHONY : CMakeFiles/pcl_debug.dir/rule
+
+# Convenience name for target.
+pcl_debug: CMakeFiles/pcl_debug.dir/rule
+
+.PHONY : pcl_debug
+
+# clean rule for target.
+CMakeFiles/pcl_debug.dir/clean:
+	$(MAKE) -f CMakeFiles/pcl_debug.dir/build.make CMakeFiles/pcl_debug.dir/clean
+.PHONY : CMakeFiles/pcl_debug.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/simple_visualizer.dir
+
+# All Build rule for target.
+CMakeFiles/simple_visualizer.dir/all:
+	$(MAKE) -f CMakeFiles/simple_visualizer.dir/build.make CMakeFiles/simple_visualizer.dir/depend
+	$(MAKE) -f CMakeFiles/simple_visualizer.dir/build.make CMakeFiles/simple_visualizer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tingxfan/cpp_exp/study_pointcloud/build/CMakeFiles --progress-num=7,8 "Built target simple_visualizer"
+.PHONY : CMakeFiles/simple_visualizer.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/simple_visualizer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tingxfan/cpp_exp/study_pointcloud/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/simple_visualizer.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tingxfan/cpp_exp/study_pointcloud/build/CMakeFiles 0
+.PHONY : CMakeFiles/simple_visualizer.dir/rule
+
+# Convenience name for target.
+simple_visualizer: CMakeFiles/simple_visualizer.dir/rule
+
+.PHONY : simple_visualizer
+
+# clean rule for target.
+CMakeFiles/simple_visualizer.dir/clean:
+	$(MAKE) -f CMakeFiles/simple_visualizer.dir/build.make CMakeFiles/simple_visualizer.dir/clean
+.PHONY : CMakeFiles/simple_visualizer.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/pcl_visualizer_demo.dir
@@ -76,7 +134,7 @@ clean: CMakeFiles/pcd_write_test.dir/clean
 CMakeFiles/pcl_visualizer_demo.dir/all:
 	$(MAKE) -f CMakeFiles/pcl_visualizer_demo.dir/build.make CMakeFiles/pcl_visualizer_demo.dir/depend
 	$(MAKE) -f CMakeFiles/pcl_visualizer_demo.dir/build.make CMakeFiles/pcl_visualizer_demo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tingxfan/cpp_exp/study_pointcloud/build/CMakeFiles --progress-num=3,4 "Built target pcl_visualizer_demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tingxfan/cpp_exp/study_pointcloud/build/CMakeFiles --progress-num=5,6 "Built target pcl_visualizer_demo"
 .PHONY : CMakeFiles/pcl_visualizer_demo.dir/all
 
 # Build rule for subdir invocation for target.

@@ -22,13 +22,6 @@
 
 
 
-consteval int get_value(){
-    return 3;
-}
-
-
-
-
 const int Pen{10};
 const int Marker{20};
 const int Eraser{30};
@@ -49,7 +42,7 @@ const int Ellipse{60};
 
 // run line by line from the first line to the bottom
 int main(int argc, char **argv){
-    constexpr int value = get_value();
+    // constexpr int value = get_value();
 
 
     // std::cout << "please input your name" << std::endl;
@@ -60,7 +53,7 @@ int main(int argc, char **argv){
 
 
     // endl will create another line, otherwise the next output will be in the same line of the eefirst
-    std::cout << "value : " << value << std::endl;
+    // std::cout << "value : " << value << std::endl;
     std::cout << "Number1" << std::endl;
 
 

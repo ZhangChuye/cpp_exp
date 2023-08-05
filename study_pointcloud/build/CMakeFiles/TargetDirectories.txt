@@ -1,4 +1,6 @@
-/home/tingxfan/cpp_exp/study_pointcloud/build/CMakeFiles/rebuild_cache.dir
 /home/tingxfan/cpp_exp/study_pointcloud/build/CMakeFiles/edit_cache.dir
+/home/tingxfan/cpp_exp/study_pointcloud/build/CMakeFiles/rebuild_cache.dir
+/home/tingxfan/cpp_exp/study_pointcloud/build/CMakeFiles/pcl_debug.dir
+/home/tingxfan/cpp_exp/study_pointcloud/build/CMakeFiles/simple_visualizer.dir
 /home/tingxfan/cpp_exp/study_pointcloud/build/CMakeFiles/pcl_visualizer_demo.dir
 /home/tingxfan/cpp_exp/study_pointcloud/build/CMakeFiles/pcd_write_test.dir

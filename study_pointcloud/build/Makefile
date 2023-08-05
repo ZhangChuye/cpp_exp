@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/tingxfan/cpp_exp/study_pointcloud/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -109,6 +109,32 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named pcl_debug
+
+# Build rule for target.
+pcl_debug: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pcl_debug
+.PHONY : pcl_debug
+
+# fast build rule for target.
+pcl_debug/fast:
+	$(MAKE) -f CMakeFiles/pcl_debug.dir/build.make CMakeFiles/pcl_debug.dir/build
+.PHONY : pcl_debug/fast
+
+#=============================================================================
+# Target rules for targets named simple_visualizer
+
+# Build rule for target.
+simple_visualizer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 simple_visualizer
+.PHONY : simple_visualizer
+
+# fast build rule for target.
+simple_visualizer/fast:
+	$(MAKE) -f CMakeFiles/simple_visualizer.dir/build.make CMakeFiles/simple_visualizer.dir/build
+.PHONY : simple_visualizer/fast
 
 #=============================================================================
 # Target rules for targets named pcl_visualizer_demo
@@ -163,6 +189,33 @@ pcd_write.cpp.s:
 	$(MAKE) -f CMakeFiles/pcd_write_test.dir/build.make CMakeFiles/pcd_write_test.dir/pcd_write.cpp.s
 .PHONY : pcd_write.cpp.s
 
+pcl_debug.o: pcl_debug.cpp.o
+
+.PHONY : pcl_debug.o
+
+# target to build an object file
+pcl_debug.cpp.o:
+	$(MAKE) -f CMakeFiles/pcl_debug.dir/build.make CMakeFiles/pcl_debug.dir/pcl_debug.cpp.o
+.PHONY : pcl_debug.cpp.o
+
+pcl_debug.i: pcl_debug.cpp.i
+
+.PHONY : pcl_debug.i
+
+# target to preprocess a source file
+pcl_debug.cpp.i:
+	$(MAKE) -f CMakeFiles/pcl_debug.dir/build.make CMakeFiles/pcl_debug.dir/pcl_debug.cpp.i
+.PHONY : pcl_debug.cpp.i
+
+pcl_debug.s: pcl_debug.cpp.s
+
+.PHONY : pcl_debug.s
+
+# target to generate assembly for a file
+pcl_debug.cpp.s:
+	$(MAKE) -f CMakeFiles/pcl_debug.dir/build.make CMakeFiles/pcl_debug.dir/pcl_debug.cpp.s
+.PHONY : pcl_debug.cpp.s
+
 pcl_visualizer_demo.o: pcl_visualizer_demo.cpp.o
 
 .PHONY : pcl_visualizer_demo.o
@@ -190,22 +243,57 @@ pcl_visualizer_demo.cpp.s:
 	$(MAKE) -f CMakeFiles/pcl_visualizer_demo.dir/build.make CMakeFiles/pcl_visualizer_demo.dir/pcl_visualizer_demo.cpp.s
 .PHONY : pcl_visualizer_demo.cpp.s
 
+simple_visualizer.o: simple_visualizer.cpp.o
+
+.PHONY : simple_visualizer.o
+
+# target to build an object file
+simple_visualizer.cpp.o:
+	$(MAKE) -f CMakeFiles/simple_visualizer.dir/build.make CMakeFiles/simple_visualizer.dir/simple_visualizer.cpp.o
+.PHONY : simple_visualizer.cpp.o
+
+simple_visualizer.i: simple_visualizer.cpp.i
+
+.PHONY : simple_visualizer.i
+
+# target to preprocess a source file
+simple_visualizer.cpp.i:
+	$(MAKE) -f CMakeFiles/simple_visualizer.dir/build.make CMakeFiles/simple_visualizer.dir/simple_visualizer.cpp.i
+.PHONY : simple_visualizer.cpp.i
+
+simple_visualizer.s: simple_visualizer.cpp.s
+
+.PHONY : simple_visualizer.s
+
+# target to generate assembly for a file
+simple_visualizer.cpp.s:
+	$(MAKE) -f CMakeFiles/simple_visualizer.dir/build.make CMakeFiles/simple_visualizer.dir/simple_visualizer.cpp.s
+.PHONY : simple_visualizer.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... pcl_debug"
+	@echo "... simple_visualizer"
 	@echo "... pcl_visualizer_demo"
 	@echo "... pcd_write_test"
 	@echo "... pcd_write.o"
 	@echo "... pcd_write.i"
 	@echo "... pcd_write.s"
+	@echo "... pcl_debug.o"
+	@echo "... pcl_debug.i"
+	@echo "... pcl_debug.s"
 	@echo "... pcl_visualizer_demo.o"
 	@echo "... pcl_visualizer_demo.i"
 	@echo "... pcl_visualizer_demo.s"
+	@echo "... simple_visualizer.o"
+	@echo "... simple_visualizer.i"
+	@echo "... simple_visualizer.s"
 .PHONY : help
 
 
