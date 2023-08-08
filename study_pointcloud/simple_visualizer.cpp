@@ -130,7 +130,7 @@ void octreeDownsamplingWithIntensity(
 
 int main(int argc, char** argv)
 {
-    std::ifstream myfile ("/home/tingxfan/rerun-4DMOS/exp_seq0.txt"); 
+    std::ifstream myfile ("/home/tingxfan/rerun-4DMOS/exp_gt_seq2.txt"); 
 
     vector<float> data;
 
@@ -166,7 +166,7 @@ int main(int argc, char** argv)
       pcl::PointXYZI basic_point;
       basic_point.x = data[i];
       basic_point.y = data[i+1];
-      basic_point.z = data[i+2]+1.73;
+      basic_point.z = data[i+2];
       basic_point.intensity = data[i+3];
     //   std::cout << basic_point.intensity << std::endl;
       basic_cloud_ptr->points.push_back(basic_point);
@@ -188,7 +188,7 @@ int main(int argc, char** argv)
   pcl::visualization::PCLVisualizer::Ptr viewer;
   viewer = simpleVis(cloud_filtered);
 
-  pcl::io::savePCDFileBinary(string("exp_0.pcd"), *cloud_filtered);
+  pcl::io::savePCDFileBinary(string("exp_gt_2.pcd"), *cloud_filtered);
 
     //--------------------
     // -----Main loop-----
